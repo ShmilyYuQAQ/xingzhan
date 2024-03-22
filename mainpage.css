@@ -1,0 +1,188 @@
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* font: 1.2em / 1.2 Arial, Helvetica, sans-serif; */
+}
+
+.grid{
+  flex-grow: 1;
+}
+#mainnav {
+    text-align: center;
+    /* padding: .5em;设置一个外边距 */
+    top: 0;
+    position: sticky; /* 设置元素“粘住”效果 */
+    height: 4em;
+    /* margin: 0;
+    padding: 0; */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(153, 151, 151, 0.8);
+    
+  }
+  #mainnav a::after{
+    content:'';
+    position:absolute;
+    left:33%;
+    /* bottom: -6px; */
+    width: 35%;
+    height: 3px;
+    background: white;
+    border-radius:5px;
+    transform: scaleX(0);
+    transition:transform.5s;/*使得动画更自然*/
+    transform-origin: right;
+    display: block;
+  }
+  #mainnav a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .navbar {
+    background-color:rgb(222, 217, 217);
+    opacity: 0.9;
+  }
+  
+  .navbar-fixed {
+    background-color: rgba(0,0,0,0.6);
+    opacity: 1;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    align-items: center;
+    /* justify-content: space-between;将菜单项之间的空间均匀分配 */
+    text-align: center;
+    height: 4em;
+  }
+  nav ul li{
+    flex:1;
+  }
+  /* nav a {
+    position: relative;
+    display: block;
+
+    text-decoration: none;
+    /* padding: .5em 1em; */
+    
+  
+  nav li a {
+    position: relative;
+    display: block;
+    /* padding: 10px 20px; */
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: bold; /* 将字体设置为粗体 */
+  }
+  .curpage{
+    color:rgb(255, 111, 0);
+  }
+  nav a:hover {
+    color: rgb(255, 111, 0); /* 设置悬停时链接文本颜色为红色 */
+  }
+  nav a:hover::after{
+    transform: scaleX(1);
+  }
+  
+  nav a:active {
+    color: rgb(255, 111, 0); /* 设置点击时链接文本颜色为蓝色 */
+  }
+  nav li a img{
+    /* opacity: 0.8; */
+    height:4em;
+  }
+  #imgpage{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #imgpage img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  #botpage{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+  }
+  #botpage1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    left: 5%;
+    /* padding: 0 10px;  */
+    /* justify-content: space-between; */
+  }
+  .navcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* padding: 10px; */
+   
+  }
+  .navcontainer ul{
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+    overflow: hidden;
+    align-items: left;
+    /* text-align: center; */
+    /* height: 4em; */
+  }
+ 
+  .navcontainer ul li a {
+    display: block;
+    /* padding: 10px 20px; */
+    text-decoration: none;
+    color:black;
+  }
+  
+  .navcontainer ul li a:hover {
+    color: red; /* 设置悬停时链接文本颜色为红色 */
+  }
+  
+  .navcontainer ul li a:active {
+    transform: scaleX(1);
+    color: rgb(255, 111, 0); /* 设置点击时链接文本颜色为蓝色 */
+  }
+  #botpage2{
+    position: relative;
+    left: 1%;
+  }
+  #cslogo{
+    position: relative;
+    top:4%
+  }
+  #bslogo{
+    position: relative;
+    top:10%
+  }
+  #xingzhanjie{
+    position: absolute;
+    width: 10%;
+    height: 13%;
+    /* border: solid 1px red; */
+    left:24%;
+    top:65%;
+  }
+  .mainpage_img{
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
